@@ -1,0 +1,25 @@
+General:
+  pandas
+  pdfplumber
+  pyodbc
+  numpy
+  
+Geographic:
+  Geocodio
+  arcpy
+  
+Charting:
+  Matplotlib
+  plotly
+
+Occupational Coding:
+  Sockit
+
+Web:
+  beautifulsoup
+  Django
+  Anaconda
+
+Machine Learning:
+  scikit
+
