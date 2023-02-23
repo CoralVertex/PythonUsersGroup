@@ -1,0 +1,12 @@
+NLX Research Hub
+https://nlxresearchhub.org/
+This allows users to access raw job postings data from the NLX.  Requires registration, but state LMI offices are encouraged.
+
+IPUMS
+https://developer.ipums.org/docs/apiprogram/
+This is newly available
+
+BLS 
+https://www.bls.gov/developers/
+One obstacle to using this one is the need for a series id - formats are described here:
+https://www.bls.gov/help/hlpforma.htm
