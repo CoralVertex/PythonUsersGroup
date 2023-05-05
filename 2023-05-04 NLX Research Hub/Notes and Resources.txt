@@ -1,0 +1,41 @@
+Getting access to the data:
+NLX Research Hub
+https://nlxresearchhub.org/request-nlx-data
+
+Zip code to county crosswalk data:
+HUD USPS ZIP Code Crosswalk Files
+https://www.huduser.gov/portal/datasets/usps_crosswalk.html
+
+This Repo contains:
+
+DashboardView.PNG - a screenshot of the Tableau display
+NASWA History.py - The code to get the file and apply the region crosswalk
+naswa.xlsx - The output file NASWA History.py writes to, currently truncated
+             to 20 rows.  It will be overwritten if the script is run.
+NLx Research Hub API Overview.docx - The original documentation
+ziptoedr - a crosswalk of zip codes to counties and Economic Development Regions
+             for Minnesota
+
+
+Known issues to work around: 
+
+Nationally, wages can only be derived for about 10% of job postings 
+and maybe shouldn't be aggregated.
+
+In Minnesota, zip codes for Saint Paul and Mankato (both substantial cities) 
+were rolled into combined zip codes not present in the crosswalk and had to 
+be manually added.  Check the unmatched rows for anomalies.
+
+The structured variables aren't very frequently populated.  With some work they 
+can be derivied from long descriptions.  The only two that yielded good enough 
+results for us nationally were experience and education.  Education is also one 
+of the structured variables that seems to be more frequently populated.
+
+The API limits you to 35 days of history, meaning you have to make multiple calls 
+to get the historical series.  So far I haven't been successful at getting a 
+multiple year series for MN because certain months return an empty rowset.  That 
+might be because I've made a lot of calls at once or because they're large files or 
+because something about my date specification isn't working.  
+
+Coverage isn't consistent between states, but all states have data.  The sources 
+and volume of openings vary. 
